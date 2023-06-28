@@ -1,0 +1,62 @@
+<%= form_with(model: fund_account) do |form| %>
+  <% if fund_account.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fund_account.errors.count, "error") %> prohibited this fund_account from being saved:</h2>
+
+      <ul>
+        <% fund_account.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :entity, style: "display: block" %>
+    <%= form.text_field :entity %>
+  </div>
+
+  <div>
+    <%= form.label :account_type, style: "display: block" %>
+    <%= form.text_field :account_type %>
+  </div>
+
+  <div>
+    <%= form.label :ifsc, style: "display: block" %>
+    <%= form.text_field :ifsc %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :bank_account, style: "display: block" %>
+    <%= form.text_field :bank_account %>
+  </div>
+
+  <div>
+    <%= form.label :account_number, style: "display: block" %>
+    <%= form.text_field :account_number %>
+  </div>
+
+  <div>
+    <%= form.label :vpa_address, style: "display: block" %>
+    <%= form.text_field :vpa_address %>
+  </div>
+
+  <div>
+    <%= form.label :active, style: "display: block" %>
+    <%= form.check_box :active %>
+  </div>
+
+  <div>
+    <%= form.label :contact_id, style: "display: block" %>
+    <%= form.text_field :contact_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

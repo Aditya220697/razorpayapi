@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @payout %>
+
+<div>
+  <%= link_to "Edit this payout", edit_payout_path(@payout) %> |
+  <%= link_to "Back to payouts", payouts_path %>
+
+  <%= button_to "Destroy this payout", @payout, method: :delete %>
+</div>

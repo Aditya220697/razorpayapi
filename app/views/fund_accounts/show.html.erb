@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @fund_account %>
+
+<div>
+  <%= link_to "Edit this fund account", edit_fund_account_path(@fund_account) %> |
+  <%= link_to "Back to fund accounts", fund_accounts_path %>
+
+  <%= button_to "Destroy this fund account", @fund_account, method: :delete %>
+</div>

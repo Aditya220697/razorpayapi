@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Payouts</h1>
+
+<div id="payouts">
+  <% @payouts.each do |payout| %>
+    <%= render payout %>
+    <p>
+      <%= link_to "Show this payout", payout %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New payout", new_payout_path %>

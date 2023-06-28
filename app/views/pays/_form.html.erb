@@ -1,0 +1,42 @@
+<%= form_with(model: pay) do |form| %>
+  <% if pay.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pay.errors.count, "error") %> prohibited this pay from being saved:</h2>
+
+      <ul>
+        <% pay.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :contact_no, style: "display: block" %>
+    <%= form.text_field :contact_no %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :upi_id, style: "display: block" %>
+    <%= form.text_field :upi_id %>
+  </div>
+
+  <!-- <div>
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount %>
+  </div> -->
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<%= form_with(model: payout) do |form| %>
+  <% if payout.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(payout.errors.count, "error") %> prohibited this payout from being saved:</h2>
+
+      <ul>
+        <% payout.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :account_number, style: "display: block" %>
+    <%= form.text_field :account_number %>
+  </div>
+
+  <div>
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div>
+    <%= form.label :currency, style: "display: block" %>
+    <%= form.text_field :currency %>
+  </div>
+
+  <div>
+    <%= form.label :mode, style: "display: block" %>
+    <%= form.text_field :mode %>
+  </div>
+
+  <div>
+    <%= form.label :purpose, style: "display: block" %>
+    <%= form.text_field :purpose %>
+  </div>
+
+  <div>
+    <%= form.label :fund_account_id, style: "display: block" %>
+    <%= form.text_field :fund_account_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
